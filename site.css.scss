@@ -4,7 +4,7 @@
 //this is a comment to see if submodules are working correctly 
 
 body {
-  background: #FFF;
+  background: #000;
   text-align: center;
   // font-family: "proxima-soft", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
@@ -590,7 +590,7 @@ body.twelve {
           }
           span.information {
             font-weight: 600;
-            background-image: url(../images/iconfinder_info_293683.png);
+            background-image: url(/images/iconfinder_info_293683.png);
             background-size: 100% auto;
             width: 14px;
             height: 14px;
