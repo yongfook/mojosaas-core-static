@@ -80,6 +80,14 @@
   	}
   	section.section {
   		padding: 50px 0;
+      .tabs.is-toggle {
+        li {
+          width: auto;
+          img.save20 {
+            display: none;
+          }
+        }
+      }
       .cta {
         padding-top: 6px;
         a.social_login.button {

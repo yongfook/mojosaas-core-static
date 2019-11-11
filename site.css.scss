@@ -249,6 +249,28 @@ body.twelve {
       text-align: center;
       line-height: 34px;
     }
+    .tabs.is-toggle {
+      margin-top: 15px;
+      padding-bottom: 5px;
+      li {
+        position: relative;
+        width: 250px;
+
+        img.save20 {
+          position: absolute;
+          width: 120px !important;
+          right: -140px;
+          height: auto !important;
+          min-width: 0 !important;
+          max-width: 120px !important;
+        }
+      }
+    }
+    .tabs.is-toggle li.is-active a {
+      border-color: $apple_blue;
+      background-color: $apple_blue;
+
+    }
     p.quote {
       font-weight: 600;
       color: #000;
@@ -529,6 +551,16 @@ body.twelve {
 
     margin: 0 auto;
     margin-top: 40px;
+    &.monthly {
+      .annual {
+        display: none !important;
+      }
+    }
+    &.annual {
+      .monthly {
+        display: none !important;
+      }
+    }
 
     .pricingcontainer {
       height: 100%;
