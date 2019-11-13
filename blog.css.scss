@@ -44,6 +44,23 @@ body.twelve {
 			margin-top: 80px;
 		}
 	}
+	.blog_body > p:first-child {
+		font-family: "Source Serif Pro", serif;
+		color: #000;
+		font-weight: 600;
+		font-size: 25px !important;
+		a {
+			font-size: 25px !important;
+		}
+		&::after {
+			padding-top: 1.5em;
+			display: block;
+			content: "";
+			border-bottom: 1px solid $apple_grey_light;
+			width: 50%;
+			margin-bottom: 1.5em;
+		}
+	}
 	.blog_body {
 		// box-shadow: 0 0 20px rgba(0,0,0,0.1);
 		// border-radius: 5px;
