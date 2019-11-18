@@ -330,6 +330,12 @@ body.twelve {
       * {
         text-align: left !important;
       }
+      h2, p.subtitle {
+        text-align: center !important;
+      }
+      p.subtitle {
+        margin-bottom: 60px;
+      }
     }
   }
   section.section.alt {
@@ -342,8 +348,8 @@ body.twelve {
       // opacity: 0.2;
     }
   }
-  section.section.resources_unpad {
-    padding-top: 0 !important;
+  section.section.resources_unpad, section.section.after_hero_unpad {
+    padding-top: 20px !important;
   }
   section.section.highlighted {
     position: relative;
@@ -416,12 +422,21 @@ body.twelve {
 
   ///////////////////////////////////////// Feature cards 
   .feature_cards {
-    margin-top: 60px;
+    // margin-top: 60px;
     &.no_subtitle {
       margin-top: 30px;
     }
     .feature_card {
       padding: 2rem;
+      &.explain {
+        font-size: 22px;
+        p {
+          margin-bottom: 1em;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
       .minipic {
         height: 40px;
         // background: $apple_grey_lightestest;
@@ -734,32 +749,32 @@ body.twelve {
     }
   }
 
-  .cocoen {
-    span.cocoen-drag {
-      background: $apple_grey_dark;
-      width: 1px;
-    }
-    .cocoen-drag::before {
-      border: 1px solid $apple_grey_dark;
-      content: '';
-      height: 30px;
-      left: 50%;
-      margin-left: -30px;
-      margin-top: auto;
-      position: absolute;
-      top: auto;
-      bottom: 45px;
-      width: 60px;
-      background-repeat: no-repeat;
-      background-color: #FFF;
-      background-position: 50% 50%;
-      background-size: 50% auto;
-      background-image: url(../images/horizontal_drag.png);
-      border-radius: 3px;
-      box-shadow: 0 5px 8px 0 rgba(0,0,0,0.1);
+  // .cocoen {
+  //   span.cocoen-drag {
+  //     background: $apple_grey_dark;
+  //     width: 1px;
+  //   }
+  //   .cocoen-drag::before {
+  //     border: 1px solid $apple_grey_dark;
+  //     content: '';
+  //     height: 30px;
+  //     left: 50%;
+  //     margin-left: -30px;
+  //     margin-top: auto;
+  //     position: absolute;
+  //     top: auto;
+  //     bottom: 45px;
+  //     width: 60px;
+  //     background-repeat: no-repeat;
+  //     background-color: #FFF;
+  //     background-position: 50% 50%;
+  //     background-size: 50% auto;
+  //     background-image: url(../images/horizontal_drag.png);
+  //     border-radius: 3px;
+  //     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.1);
 
-    }
-  }
+  //   }
+  // }
 
   // .pagefooter {
   //   display: none;
@@ -890,6 +905,17 @@ body.twelve {
 
 @media only screen and (max-width : 768px) {
   body.twelve {
+    section.section {
+      .cta {
+        a.button.secondary {
+          display: block;
+          margin-top: 20px;
+          &:first-child {
+            margin-top: 0px;
+          }
+        }
+      }
+    }
     .feature_grid {
       .columns {
         border: none;
