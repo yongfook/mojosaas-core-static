@@ -68,6 +68,9 @@
         }
       }
     }
+    section.section.resources_unpad, section.section.after_hero_unpad {
+      // padding-top:  !important;
+    }
     section.section .illustration.blog img {
       max-height: 200px;
     }
@@ -133,7 +136,7 @@
   		.illustration {
   			margin-right: 20px !important;
   			margin-left: 20px !important;
-  			margin-top: 50px !important;
+  			margin-top: 0 !important;
   		}
   		.illustration img {
   			height: auto !important;
