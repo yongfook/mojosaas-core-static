@@ -996,6 +996,20 @@ body.twelve {
 
 @media only screen and (max-width : 768px) {
   body.twelve {
+    .edge_to_edge {
+      .banner_feature {
+        .feature_copy {
+          padding: 0;
+          p {
+            color: #FFF;
+            letter-spacing: -0.5px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1.3em;
+          }
+        }
+      }
+    }
     .partner_logos {
       margin-bottom: 40px;
       margin-top: -40px;
