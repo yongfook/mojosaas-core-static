@@ -4,28 +4,28 @@
 
   body.twelve {
     .container.for_annotated_screen {
-      &.has_bottom_arrow {
-        padding-bottom: 60px;
-        .annotated_screen {
-          margin-top: 40px !important;
-        }
-      }
-      &.has_no_arrow {
-        .annotated_screen {
-          margin-top: 40px !important;
-        }
-      }
-      .annotated_screen {
-        margin-top: 150px;
-        // margin-bottom: 40px;
-        &.after {
-          margin-top: 30px;
-          margin-bottom: 50px;
-        }
-        .screen {
+      // &.has_bottom_arrow {
+      //   padding-bottom: 60px;
+      //   .annotated_screen {
+      //     margin-top: 40px !important;
+      //   }
+      // }
+      // &.has_no_arrow {
+      //   .annotated_screen {
+      //     margin-top: 40px !important;
+      //   }
+      // }
+      // .annotated_screen {
+      //   margin-top: 150px;
+      //   // margin-bottom: 40px;
+      //   &.after {
+      //     margin-top: 30px;
+      //     margin-bottom: 50px;
+      //   }
+      //   .screen {
           
-        }
-      }
+      //   }
+      // }
       .character {
         display: none;
       }
