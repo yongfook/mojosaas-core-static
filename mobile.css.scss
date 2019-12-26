@@ -181,6 +181,23 @@
   	.feature_cards.no_subtitle {
   		margin-top: 20px;
   	}
+    .feature_cards {
+      .feature_card {
+        h2, h3, h4 {
+          padding-right: 0;
+        }
+        &.is-left, &.is-right {
+          margin: 0;
+          margin-bottom: 2em !important;
+        }
+        // &.is-left {
+        //   margin-bottom: 2em;
+        // }
+        // &.is-right {
+        //   margin-top: 2em;
+        // }
+      }
+    }
   }
 }
 

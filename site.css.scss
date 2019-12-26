@@ -94,6 +94,7 @@ body.twelve {
 
         &.parent {
           // padding: 12px 0;
+          font-weight: 600;
         }
         &:hover {
           color: #000;
@@ -436,6 +437,12 @@ body.twelve {
     }
     .feature_card {
       padding: 2rem;
+      &.is-left {
+        margin-right: 2em;
+      }
+      &.is-right {
+        margin-left: 2em;
+      }
       &.explain {
         font-size: 22px;
         p {
@@ -455,11 +462,12 @@ body.twelve {
       }
       h2, h3, h4 {
         margin-top: 0 !important;
-        font-size: 22px;
+        font-size: 30px;
         text-align: left !important;
-        line-height: 25px;
+        line-height: 1.3em;
         padding-top: 15px;
         padding-bottom: 10px;
+        padding-right: 4em;
       }
       h2 {
         padding-top: 0;
@@ -929,11 +937,15 @@ body.twelve {
       height: 100px;
       display: inline-block;
       padding: 20px;
+      background: #FFF;
       &.logo {
         border: 1px solid $apple_grey_light;
         border-radius: 8px;
         box-shadow: 0 10px 18px 0 rgba(0,0,0,0.1);
-
+      }
+      &.plus {
+        background: transparent;
+        border: 1px solid transparent;
       }
     }
   }
