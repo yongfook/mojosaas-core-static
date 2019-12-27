@@ -61,7 +61,11 @@
   body.twelve {
     .copyright * {
       text-align: left !important;
-      display: block;
+    }
+    .copyright {
+      .level-item {
+        display: block;
+      }
     }
     .card.blog_container {
       margin-left: -30px;
