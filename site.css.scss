@@ -355,6 +355,13 @@ body.twelve {
   section.section.alt {
     background: $apple_grey_background;
   }
+  section.section.temporary {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin-bottom: -1px;
+    font-family: monospace;
+    font-size: 2em;
+  }
   section.section.comingsoon {
     background: $apple_grey_lightestest;
     min-height: 300px;
