@@ -59,8 +59,9 @@ body.twelve {
     font-size: 0.8rem;
     display: none;
   }
-  &.plugins .topmenu li a.plugins, &.resources .topmenu li a.resources, &.suggestions .topmenu li a.suggestions, &.pricing .topmenu li a.pricing, &.features .topmenu li a.features, &.demo .topmenu li a.demo {
+  &.product .topmenu li a.product, &.how-it-works .topmenu li a.how-it-works, &.plugins .topmenu li a.plugins, &.resources .topmenu li a.resources, &.suggestions .topmenu li a.suggestions, &.pricing .topmenu li a.pricing, &.features .topmenu li a.features, &.demo .topmenu li a.demo {
     color: #000;
+    opacity: 1;
   }
 
   ///////////////////////////////////////// Navigation menu
@@ -91,15 +92,18 @@ body.twelve {
       a {
         color: #000;
         border: 1px solid transparent;
-
         &.parent {
           // padding: 12px 0;
           font-weight: 600;
+          // opacity: 0.5;
         }
         &:hover {
           color: #000;
           i.icon img {
             opacity: 1 !important;
+          }
+          &.parent {
+            opacity: 1;
           }
         }
         &.cta {
