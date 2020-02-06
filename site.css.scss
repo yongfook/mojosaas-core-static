@@ -599,6 +599,111 @@ body.twelve {
   }
 
    ///////////////////////////////////////// Pricing
+  .toggle_switch {
+    padding-top: 8px;
+    .column {
+      // border: 1px solid red;
+    }
+    .toggle {
+      flex: none;
+    }
+    .monthly, .annual {
+      text-align: right;
+      span {
+        top: 4px;
+        padding: 0 10px;
+        position: relative;
+        text-transform: uppercase;
+        color: $apple_grey_medium;
+        font-size: 0.8em;
+        letter-spacing: 1px;
+        font-weight: 700;
+        strong {
+          color: $apple_grey_medium;
+          font-weight: 700;
+        }
+        &.selected {
+          color: #000;
+          strong {
+            color: #000;
+            //holy shit this stuff is so messy now, will refactor later MAYBE? but for now I'm running pricing page experiments and I ain't got time to bleed
+          }
+        }
+        em {
+          font-style: normal;
+          font-weight: 400;
+          // font-size: 0.9em;
+          text-transform: none;
+          letter-spacing: 0;
+        }
+      }
+    }
+    .annual {
+      text-align: left;
+    }
+    /* The switch - the box around the slider */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    /* The slider */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: $apple_green;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+  }
   .pricing_toggle {
     padding-top: 10px;
   }
@@ -613,7 +718,7 @@ body.twelve {
     opacity: 0.5;
   }
   .pricingtable {
-    // max-width: 1100px;
+    max-width: 1100px;
 
     margin: 0 auto;
     margin-top: 40px;
@@ -638,7 +743,7 @@ body.twelve {
       border-radius: 5px;
       min-height: 450px;
       position: relative;
-      padding-bottom: 122px;
+      padding-bottom: 78px;
       .planname {
         font-size: 30px;
         color: #000;
@@ -647,24 +752,33 @@ body.twelve {
         line-height: 1em;
       }
       .planprice {
-        padding-top: 15px;
-        font-weight: 400;
-        font-size: 48px;
-        color: $apple_grey_dark;
+        text-align: left;
+        // padding-top: 15px;
+        // font-weight: 400;
+        font-size: 28px;
+        font-weight: 700;
+        color: $apple_blue;
+        padding-bottom: 0.3em;
+
         // text-transform: uppercase;
-        line-height: 1em;
-        s {
-          font-size: 60%;
-          font-weight: 300;
-        }
+        // line-height: 1.2em;
+        // s {
+        //   font-size: 60%;
+        //   font-weight: 300;
+        // }
       }
       .planpricecomment {
-        font-size: 11px;
-        letter-spacing: 1px;
+        // text-align: center;
+        // font-size: 11px;
+        // letter-spacing: 1px;
         color: $apple_grey_dark;
+        // line-height: 1em;
+        // padding-top: 18px;
+        // text-transform: uppercase;
+        border-bottom: 1px solid #EEE;
+        padding: 12px 15px;
         line-height: 1em;
-        padding-top: 18px;
-        text-transform: uppercase;
+        text-align: left;
         &.enterprise {
           padding-right: 50px;
           padding-left: 50px;
@@ -672,20 +786,33 @@ body.twelve {
         }
       }
       ul.planfeatures {
-        padding-top: 35px;
+        // padding-top: 35px;
         font-size: 16px;
         color: $apple_grey_dark;
         line-height: 1em;
         text-align: left;
-        border-bottom: 1px solid #EEE;
+        // border-bottom: 1px solid #EEE;
         li {
-          border-top: 1px solid #EEE;
-          padding: 10px 15px;
+          border-bottom: 1px solid #EEE;
+          padding: 12px 15px;
           position: relative;
           &.keyfeature {
             strong {
+              position: relative;
+              margin-bottom: -2px;
+              top: -1px;
+              margin-right: 8px;
               font-weight: 600;
-              color: $apple_green;
+              background: $apple_green;
+              color: #FFF;
+              border-radius: 20px;
+              text-align: center;
+              font-weight: 900;
+              font-size: 0.8em;
+              width: 1.5em;
+              height: 1.5em;
+              display: inline-block;
+              padding: 2px;
             }
           }
           span.information {
@@ -701,6 +828,13 @@ body.twelve {
             right: 10px;
             cursor: pointer;
             text-align: center;
+          }
+          span.allplans {
+            color: #000;
+          }
+          em {
+            font-style: normal;
+            font-weight: 800;
           }
         }
       }
@@ -719,12 +853,50 @@ body.twelve {
         width: 100%;
         bottom: 0;
         .inner {
-          padding: 30px;
+          padding: 15px;
         }
         a {
           min-width: 100%;
           padding: 0;
 
+        }
+      }
+    }
+    .pricingcontainer .pricing {
+      border-color: $apple_grey_light;
+      border-radius: 8px;
+      border-width: 3px;
+      overflow: hidden;
+
+      .planname {
+        padding: 0;
+        text-align: left;
+        padding: 15px;
+        border-bottom: 1px solid $apple_grey_light;
+        background: $apple_grey_background;
+        text-transform: uppercase;
+        font-size: 22px;
+        color: #333;
+        margin-bottom: 0;
+        font-weight: 700;
+        .level-right {
+          text-transform: none;
+          color: $apple_blue;
+        }
+      }
+      &.highlighted {
+        border-color: $apple_blue;
+        border-width: 3px;
+        box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+        li {
+          span {
+            color: $apple_grey_dark;
+          } 
+        }
+      }
+      &.normal:not(.highlighted) {
+        li {
+          // font-size: 0.8em !important;
         }
       }
     }
