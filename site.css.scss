@@ -825,12 +825,17 @@ body.twelve {
             // right: 0;
             top: 50%;
             margin-top: -7px;
-            right: 10px;
+            // margin-left: 1em;
+            right: 15px;
             cursor: pointer;
             text-align: center;
+            opacity: 0.3;
           }
           span.allplans {
             color: #000;
+          }
+          span.info {
+
           }
           em {
             font-style: normal;
