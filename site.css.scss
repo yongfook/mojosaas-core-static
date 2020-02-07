@@ -607,6 +607,9 @@ body.twelve {
     .toggle {
       flex: none;
     }
+    .label {
+      cursor: pointer;
+    }
     .monthly, .annual {
       text-align: right;
       span {
