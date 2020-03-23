@@ -6,7 +6,7 @@ body.twelve {
 			padding-right: 100px;
 		}
 	}
-	.blog_poster_image {
+	.blog_poster_image, .video_container {
 		max-width: 1000px;
 		margin: 0 auto;
 		margin-top: 80px;
@@ -14,6 +14,17 @@ body.twelve {
 		position: relative;
 		border-radius: 8px;
 		overflow: hidden;
+		&.video_container {
+			@media only screen and (max-width : 768px) {
+				border-radius: 0px;
+				.intro_video {
+					height: 300px !important;
+				}
+			}
+			.intro_video {
+				height: 523px;
+			}
+		}
 		.credit {
 			position: absolute;
 			top: 15px;
@@ -183,7 +194,7 @@ body.twelve {
 
 @media only screen and (max-width : 768px) {
 	body.twelve {
-		.blog_poster_image {
+		.blog_poster_image, .video_container {
 			margin-top: 80px;
 			margin-bottom: -50px;
 			border-radius: 0;
