@@ -116,14 +116,15 @@ body.twelve {
 		position: relative;
 		// z-index: 1000;
 		padding: 50px;
-		* {
-			// font-size: 1.3rem;
-			// line-height: 2.3rem;
-			text-align: left;
-			color: #333;
-			padding: 0;
-			margin: 0;
-			font-size: 18px;
+		p, h2, h3, ul, ol {
+				// font-size: 1.3rem;
+				// line-height: 2.3rem;
+				text-align: left;
+				color: #333;
+				padding: 0;
+				margin: 0;
+				font-size: 18px;
+
 		}
 		text-align: left !important;
 		color: #000;
